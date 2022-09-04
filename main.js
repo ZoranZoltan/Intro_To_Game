@@ -6,8 +6,6 @@ window.onload = function() {
       mouse = { x: false, y: false },
       last_mouse = {};
   
-    //initiation
-  
     function dist(p1x, p1y, p2x, p2y) {
       return Math.sqrt(Math.pow(p2x - p1x, 2) + Math.pow(p2y - p1y, 2));
     }
@@ -143,8 +141,7 @@ window.onload = function() {
       );
     }
     function draw() {
-      //animation
-      if (mouse.x) {
+      if (mouse.x) {                          //animacija
         target.errx = mouse.x - target.x;
         target.erry = mouse.y - target.y;
       } else {
@@ -221,8 +218,6 @@ window.onload = function() {
   
     function loop() {
       window.requestAnimFrame(loop);
-      // c.fillStyle="rgba(30,30,30,0.1)";
-      // c.fillRect(0, 0, w, h);
       c.clearRect(0, 0, w, h);
       draw();
     }
